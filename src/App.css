@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+.weather-card-wrapper {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: sans-serif;
+  margin-left: 20px;
+  padding: 20px;
+}
+.weather-card-wrapper h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.weather-card-wrapper p {
+  font-size: 18px;
+}

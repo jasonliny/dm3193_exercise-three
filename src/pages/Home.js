@@ -4,6 +4,7 @@ import { WEATHER_APP_API_KEY } from "../API_KEYS";
 import { useSearchParams } from "react-router-dom";
 import WeatherCard from "../components/WeatherCard";
 import Header from "../components/Header";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   // value stored in stae for weather data
@@ -61,19 +62,21 @@ function Home() {
   // Display weather information in app
   console.log("state value", weatherData);
   return (
-    <div>
-      <Header />
-      <h1>Weather App</h1>
-      <WeatherCard
-        city={city}
-        cloudiness={cloudiness}
-        humidity={humidity}
-        tempCur={tempCur}
-        tempHigh={tempHigh}
-        tempLow={tempLow}
-        weatherType={weatherType}
-        windSpeed={windSpeed}
-      />
+    <div style={{ backgroundColor: `rgba(0,0,0,${cloudiness / 100})` }}>
+      <div className="weather-app-wrapper">
+        <Header />
+        <h1>Weather App</h1>
+        <WeatherCard
+          city={city}
+          cloudiness={cloudiness}
+          humidity={humidity}
+          tempCur={tempCur}
+          tempHigh={tempHigh}
+          tempLow={tempLow}
+          weatherType={weatherType}
+          windSpeed={windSpeed}
+        />
+      </div>
     </div>
   );
 }

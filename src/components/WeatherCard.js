@@ -1,4 +1,5 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 function WeatherCard({
   city,
@@ -11,12 +12,15 @@ function WeatherCard({
   windSpeed,
 }) {
   return (
-    <div class="weather-card-wrapper">
+    <div className="weather-card-wrapper">
       <h2>{city}</h2>
-      <p>Weather Type: {weatherType}</p>
-      <div class="temp">
+      <div className="weather-card--weatherType">
+        <WeatherIcon weatherType={weatherType} />
+        <p>{weatherType}</p>
+      </div>
+      <div className="temp">
         <p>Current Temperature: {tempCur}&deg;F</p>
-        <div class="temp-range">
+        <div className="temp-range">
           <p>High Temperature: {tempHigh}&deg;F</p>
           <p>Low Temperature: {tempLow}&deg;F</p>
         </div>

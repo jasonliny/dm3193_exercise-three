@@ -4,15 +4,12 @@ import { WEATHER_APP_API_KEY } from "../API_KEYS";
 import { useSearchParams } from "react-router-dom";
 import WeatherCard from "../components/WeatherCard";
 import Header from "../components/Header";
-import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
-  // value stored in stae for weather data
+  // value stored in state for weather data
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("Orlando");
   const [searchParams] = useSearchParams();
-
-  // Cities to query: Seoul, Chicago, Orlando,
 
   console.log("searchParams", searchParams);
 

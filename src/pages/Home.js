@@ -11,8 +11,6 @@ function Home() {
   const [city, setCity] = useState("Orlando");
   const [searchParams] = useSearchParams();
 
-  console.log("searchParams", searchParams);
-
   useEffect(() => {
     const cityToQuery = searchParams.get("city") || city;
     setCity(cityToQuery);
@@ -57,7 +55,6 @@ function Home() {
   }, [weatherData]);
 
   // Display weather information in app
-  console.log("state value", weatherData);
   return (
     <div style={{ backgroundColor: `rgba(0,0,0,${cloudiness / 100})` }}>
       <div className="weather-app-wrapper">

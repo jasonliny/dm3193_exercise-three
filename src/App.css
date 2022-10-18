@@ -6,7 +6,8 @@
   min-height: 100vh;
 }
 .weather-app-wrapper h1 {
-  color: #000088;
+  color: #0000aa;
+  font-size: 48px;
   text-align: center;
 }
 
@@ -18,7 +19,7 @@
 
 .cities-header a {
   color: black;
-  background-color: #888888;
+  background-color: #aaaaaa;
   font-size: 18px;
   margin-left: 20px;
   padding: 10px;

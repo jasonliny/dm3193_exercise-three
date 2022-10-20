@@ -22,10 +22,8 @@ function Home() {
       )
       .then(function (response) {
         setWeatherData(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
-        console.log(error);
         setWeatherData({}); // reset weather data
       });
   }, []);
